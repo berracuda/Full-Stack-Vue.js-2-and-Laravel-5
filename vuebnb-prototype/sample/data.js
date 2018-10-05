@@ -11,26 +11,32 @@ var sample = {
   'the building. There is indoor spa and pool.',
   amenities: [
     {
+      id: 1,
       title: 'Wireless Internet',
       icon: 'fa-wifi'
     },
     {
+      id: 2,
       title: 'Pets Allowed',
       icon: 'fa-paw'
     },
     {
+      id: 3,
       title: 'TV',
       icon: 'fa-television'
     },
     {
+      id: 4,
       title: 'Kitchen',
       icon: 'fa-cutlery'
     },
     {
+      id: 5,
       title: 'Breakfast',
       icon: 'fa-coffee'
     },
     {
+      id: 6,
       title: 'Laptop friendly workspace',
       icon: 'fa-laptop'
     }
