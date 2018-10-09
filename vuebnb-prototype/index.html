@@ -18,7 +18,11 @@
   </div>
   <div id="app">
     <div class="header">
-      <div class="header-image" v-bind:style="headerImageStyle"></div>
+      <div class="header-image" v-bind:style="headerImageStyle">
+        <button class="view-photos" v-on:click="modalOpen = true">
+        View Photos
+        </button>
+      </div>
     </div>
     <div class="container">
       <div class="heading">
@@ -28,7 +32,11 @@
       <hr>
       <div class="about">
         <h3>About this listing</h3>
-        <p>{{ about }}</p>
+        <p v-bind:class="{ contracted: contracted }">{{ about }}</p>
+        <button class="more" v-on:click="contracted = !contracted">
+          <p v-if="contracted == true">{{ textMore }}</p>
+          <p v-else>{{ textLess }}</p>
+        </button>
       </div>
       <div class="lists">
         <hr>
@@ -50,6 +58,12 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div id="modal" v-bind:class="{ show: modalOpen }">
+      <button v-on:click="modalOpen = false" class="modal-close">&times;</button>
+      <div class="modal-content">
+        <img src="sample/header.jpg" alt="">
       </div>
     </div>
   </div>
